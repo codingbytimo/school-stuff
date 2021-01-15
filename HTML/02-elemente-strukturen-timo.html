@@ -3,18 +3,71 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Cheetsheet Timo</title>
+    <link rel="stylesheet" href="02-elemente-strukturen-timo.css">
   </head>
   <body>
     <h1>Cheatsheet für HTML</h1>
     <h2>HTML</h2>
     <ul>
       <li>HTML steht für <strong>HyperText Markup Language</strong></li>
-      <li>Die Grundlegende Syntax eines HTML Befehls ist: &ltELEMENT&gtINHALT&lt/BEFEHL&gt</li>
+      <li>Die <span>grundlegende Syntax</span> eines HTML Befehls ist: &ltELEMENT&gtINHALT&lt/BEFEHL&gt</li>
     </ul>
     <h2>Struktur einer HTML Datei</h2>
+    <h3>Head und Body</h3>
     <ul>
-      <li>Es gibt den "head" und den "body" tag</li>
-      <li>Der <strong class="structure1">head</strong> tag beherbergt Dinge wie Stylesheets, das charset (bsp. UTF-8)</li>
+      <li>Es gibt den <span>head</span> und den <span>body</span> tag</li>
+      <li>Der <span>head</span> tag beherbergt Dinge wie Stylesheets oder das das charset (bsp. UTF-8)</li>
+      <li>Der <span>body</span> tag beinhaltet alle <strong>sichtbaren</strong> Inhalte einer Website</li>
     </ul>
+    <h3>Überschriften</h3>
+    <ul>
+      <li>
+        Es gibt <span>verschieden große Überschriften</span> in HTML. Diese werden von <strong>h1</strong> bis <strong>h6</strong> benannt,
+        wobei <strong>h1</strong> die größte und <strong>h6</strong> die kleinste Überschrift ist
+      </li>
+    </ul>
+    <h3>Text Blöcke</h3>
+    <div>
+      Es gibt verschiedene Befehle, die etwas mit Text zu tun haben:
+      <ul>
+        <li><strong>&ltp&gt</strong>: Englisch: Paragraph</li>
+        <li>
+          <strong>&ltspan&gt</strong>: Dazu gedacht, um mit Hilfe von <span class="green">C</span><span class="red">S</span><span class="yellow">S</span>
+          einzelne Wörter oder wie hier Buchstaben zu bearbeiten
+        </li>
+        <li><strong>&ltdiv&gt</strong>: Englisch: HTML Document Division Element, allgemeine Umgebung für fließenden Text</li>
+      </ul>
+    </div>
+    <h3>Wort- und Text hervorhebung</h3>
+    <ul>
+      <li>&ltem&gt und &ltstrong&gt sind dafür da, um Text <span>hervorzuheben</span></li>
+      <li>Mit dem Befehl &ltbr&gt kann man einen <span>Zeilenumbruch</span> in seinen Text einbauen</li>
+    </ul>
+    <h3>Listen</h3>
+    <div>
+      Es gibt zwei Arten von Listen:
+      <ul>
+        <li>
+          Einmal die <span>ungeordnete Liste</span> (&ltul&gt), die ich auch schon die ganze Zeit
+          auf dieser Seite verwende
+        </li>
+        <li>Und die <span>geordnete Liste</span> (&ltol&gt)</li>
+      </ul>
+    </div>
+    <h3>Bilder und Videos</h3>
+    <div>
+      Mit HTML kann man in eine Website relativ leicht <span>Bilder</span> und <span>Videos</span> einbinden:
+      <ul>
+        <li>Bilder lassen sich mit dem Befehl &ltimg src="Bildquelle"&gt einbinden</li>
+        <li>
+          Videos lassen sich mit der &ltVideo&gt Umgebung und dem &ltsource src="Videoquelle" type="z.B. video/ogg"&gt Befehl ebenfalls einbinden.
+          Hier kann man noch mit dem Attribut "controls" Video-Kontrollelemente wie z.B. Pause einfügen
+        </li>
+        <li>
+          Sowohl bei Bildern als auch bei Videos kann man mit dem Attribut "alt" einen Alternativtext anzeigen lassen
+          falls das Bild/Video nicht richtig gelden wurde
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
