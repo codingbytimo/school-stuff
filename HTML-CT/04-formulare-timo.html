@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="04-formulare-timo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulare Cheat-Sheet von Timo</h1>
+    <div class="block-level">
+    So erstellt man Formulare in HTML:
+    </div>
+    <ul>
+        <li><span>Wichtig!</span> Formulare werden immer von einem &ltform&gt&lt/form&gt Befehl und einem &ltsection&gt&lt/section&gt Befehlen umschlossen</li>
+        <li>
+            Die Grundstruktur eines Formulars sieht so aus: <br>
+            &ltsection&gt <br>
+                &ltlabel for="id"&gtSichtbarer Text&lt/label&gt <br>
+                      &ltinput type="typ des Fromulars; z.B. text, number, usw" name="name des Formulars" id="id des Formulars"&gt <br>
+            &lt/section&gt
+        </li>
+        <br>
+        <li>
+            Es gibt allerdings Ausnahmen: <br>
+            <ul>
+                <hr>
+                <li>
+                  Eine Auswahlbox (Unten ==> Lieblingsfarbe): <br>
+                  &ltsection&gt <br>
+                    &ltlabel for="lieblingsfarbe">Sichtbarer Text&lt/label&gt <br>
+                    &ltselect name="name des select elements" id="id"> <br>
+                    &ltoption value="option">Option 1&lt/option&gt <br>
+                    &ltoption value="option">Option 2&lt/option&gt <br>
+                    &lt/select&gt <br>
+                  &lt/section&gt
+                </li>
+                <hr>
+                <li>
+                    Textfeld mit Datalist (Unten ==> Smartphonehersteller): <br>
+                    Hier schreibt man folgendes: <br>
+                    &ltsection&gt <br>
+                    &ltlabel for="id"&gt&lt/label&gt <br>
+                    &ltinput list="name der liste" id="id" name="Name des inputs"&gt <br>
+                    &ltdatalist name="den gleichen Namen wie oben bei "list", damit das Ganze verbunden wird"&gt <br>
+                    &ltoption value="Option in der Datalist"&gt&lt/option&gt <br>
+                    &lt/datalist&gt <br>
+                    &lt/section&gt
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <br>
+    Hier einmal die gängigen Formen von Formularen:
+    <form>
+    <ul>
+        <li>
+            <section>
+            <label for="textfeld">Das ist ein Textfeld (type="text") ==></label>
+                  <input type="text" name="Textfeld" id="textfeld">
+            </section>
+        </li>
+        <hr>
+        <li>
+            <section>
+                <label for="textfeld">Das ist ein Passwortfeld (type="password") ==></label>
+                      <input type="password" name="Passwortfeld" id="Passwortfeld">
+            </section>
+        </li>
+        <hr>
+        <li>
+            <section>
+            <label for="Nummernfeldfeld">Das ist ein Nummernfeldfeld (type="number") ==></label>
+                    <input type="number" name="Nummernfeldfeld" id="Nummernfeldfeld" min="0" max="100">
+            </section>
+        </li>
+        <hr>
+        <li>
+            <section>
+            <label for="Nummernfeldfeld">Das ist ein "range-slider" (type="range") ==></label>
+                    <input type="range" name="Nummernfeldfeld" id="Nummernfeldfeld" value="3" min="1" max="5">
+            </section>
+        </li>
+        <hr>
+        <li>
+            <section>
+                <input type="checkbox" name="checkbox" id="checkbox" value="checkbox">
+                <label for="checkbox"> <== Das hier ist eine Checkbox (type="checkbox")</label>
+            </section>
+        </li>
+        <hr>
+        <li>
+            <section>
+                Das hier sind Auswahlmöglickeiten, wobei nur eine Sache ausgewählt sein darf (type="radio") ==>
+                <input type="radio" name="auswahl" id="ja" value="ja">
+                <label for="ja">Ja</label>
+                <input type="radio" name="auswahl" id="nein" value="nein">
+                <label for="nein">Nein</label>
+            </section>
+        </li>
+        <hr>
+        <li>
+            <section>
+                <label for="lieblingsfarbe">Was ist deine Lieblingsfarbe?</label>
+                <select name="lieblingsfarbe" id="lieblingsfarbe">
+                  <option value="farbe">Blau</option>
+                  <option value="farbe">Rot</option>
+                  <option value="farbe">Grün</option>
+                  <option value="farbe">Gelb</option>
+                  <option value="farbe">Orange</option>
+                  <option value="farbe">Lila</option>
+                </select>
+              </section>
+        </li>
+        <hr>
+        <li>
+            <section>
+                <label for="smartphone">Von welchem Hersteller ist dein Smartphone? (Textfeld mit einer Datenliste, die Smartphonehersteller beinhaltet)</label>
+                <input list="smartphones" id="smartphone" name="smartphone">
+                <datalist id="smartphones">
+                  <option value="Samsung"></option>
+                  <option value="Apple"></option>
+                  <option value="Wiko"></option>
+                  <option value="Huawei"></option>
+                  <option value="Honor"></option>
+                  <option value="Motorola"></option>
+                </datalist>
+              </section>
+        </li>
+        <hr>
+        <li>
+            <section class="extra-info">
+                <label for="extra">Freies Textfeld zum reinschreiben (&lttextarea&gt&lt/textarea&gt):</label>
+                <br>
+                <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+              </section>
+        </li>
+        <hr>
+        <li>
+            Und dann gibt es noch zu guter Letzt den "submit button" (type="submit"): <br>
+            <section class="submission">
+                <input type="submit" value="Submit">
+            </section>
+        </li>
+    </ul>
+    </form>
+    </div>
+</body>
+</html>

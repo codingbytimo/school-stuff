@@ -1,0 +1,70 @@
+body {
+    font-size: large;
+    font-family: Fira Code;
+    text-align: center;
+    background-color: #17202a;
+    color: #FFF;
+}
+
+h1 {
+  font-family: Fira Code;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 8px;
+  background: #75bcf1;
+  border-radius: 2px;
+  transition: all 0.3s ease-out;
+}
+
+h1:hover {
+  background: #45b39d;
+}
+
+.img1 {
+    width: 30em;
+    margin-top: 1em;
+}
+.img2 {
+  width: 30em;
+  margin-top: 1em;
+}
+.img3 {
+  width: 15em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+table {
+    height: 40%;
+    left: 10%;
+    margin: 20px auto;
+    overflow-y: scroll;
+    position: static;
+    width: 80%;
+  }
+  
+  thead th {
+    background: #45b39d;
+    color: black;
+    font-family: Fira Code;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+    color: black;
+  }
+  
+  th, td {
+    font-family: Fira Code;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 20px;
+    text-align: left;
+    width: 33.3333%;
+  }

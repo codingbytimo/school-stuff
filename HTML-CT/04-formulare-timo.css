@@ -1,0 +1,105 @@
+html, body{
+    height: 100vh;
+    background: #1c2833;
+    align-items: center;
+    color: #f0f3f4;
+    font-family: Fira Code;
+    font-size: 18px;
+  }
+
+h1 {
+    font-family: fantasy;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 8px;
+    background: #75bcf1;
+    border-radius: 2px;
+    transition: all 0.3s ease-out;
+}
+
+h1:hover {
+    background: #3c95dd;
+}
+
+span {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 8px;
+    background:  #ec7063;
+    border-radius: 2px;
+    transition: all 0.3s ease-out;
+}
+
+span:hover {
+    background: #f5b041;
+}
+
+ul {
+    list-style: square;
+    border: 5px white;
+  }
+
+hr {
+    color: #f0f3f4;
+    margin: 10px;
+}
+
+input {
+    font-family: Fira Code;
+}
+
+input[type=text] {
+    background-color: #1c2833;
+    color: white;
+    border: 3px solid #a569bd;
+    border-radius: 4px;
+}
+
+input[type=password] {
+    background-color: #1c2833;
+    color: white;
+    border: 3px solid #76d7c4;
+    border-radius: 4px;
+}
+
+input[type=number] {
+    background-color: #1c2833;
+    color: white;
+    border: 3px solid #ec7063;
+    border-radius: 4px;
+}
+
+select {
+    background-color: #1c2833;
+    font-family: Fira Code;
+    color: white;
+    border: 3px solid #eb984e;
+    border-radius: 4px;
+}
+
+input[list] {
+    background-color: #1c2833;
+    color: white;
+    border: 3px solid #85c1e9;
+    border-radius: 4px;
+}
+
+textarea {
+    background-color: #1c2833;
+    font-family: Fira Code;
+    color: white;
+    border: 3px solid #ff93d6;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    background-color: #1c2833;
+    color: white;
+    border: 3px solid  #27ae60;
+    border-radius: 4px;
+    transition: all 0.3s ease-out;
+}
+
+input[type=submit]:hover {
+    background-color:  #7dcea0 ;
+}

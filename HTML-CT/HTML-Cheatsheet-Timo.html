@@ -3,29 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Cheetsheet Timo</title>
-    <link rel="stylesheet" href="02-elemente-strukturen-timo.css">
+    <link rel="stylesheet" href="HTML-Cheatsheet-Timo.css">
   </head>
   <body>
     <h1>Cheatsheet für HTML</h1>
     <h2>HTML</h2>
+    <div>
     <ul>
       <li>HTML steht für <strong>HyperText Markup Language</strong></li>
       <li>Die <span>grundlegende Syntax</span> eines HTML Befehls ist: &ltELEMENT&gtINHALT&lt/BEFEHL&gt</li>
     </ul>
+    </div>
     <h2>Struktur einer HTML Datei</h2>
     <h3>Head und Body</h3>
+    <div>
     <ul>
       <li>Es gibt den <span>head</span> und den <span>body</span> tag</li>
       <li>Der <span>head</span> tag beherbergt Dinge wie Stylesheets oder das das charset (bsp. UTF-8)</li>
       <li>Der <span>body</span> tag beinhaltet alle <strong>sichtbaren</strong> Inhalte einer Website</li>
     </ul>
+    </div>
     <h3>Überschriften</h3>
+    <div>
     <ul>
       <li>
         Es gibt <span>verschieden große Überschriften</span> in HTML. Diese werden von <strong>h1</strong> bis <strong>h6</strong> benannt,
         wobei <strong>h1</strong> die größte und <strong>h6</strong> die kleinste Überschrift ist
       </li>
     </ul>
+    </div>
     <h3>Text Blöcke</h3>
     <div>
       Es gibt verschiedene Befehle, die etwas mit Text zu tun haben:
@@ -39,10 +45,12 @@
       </ul>
     </div>
     <h3>Wort- und Text hervorhebung</h3>
+    <div>
     <ul>
       <li>&ltem&gt und &ltstrong&gt sind dafür da, um Text <span>hervorzuheben</span></li>
       <li>Mit dem Befehl &ltbr&gt kann man einen <span>Zeilenumbruch</span> in seinen Text einbauen</li>
     </ul>
+    </div>
     <h3>Listen</h3>
     <div>
       Es gibt zwei Arten von Listen:
@@ -68,6 +76,60 @@
           falls das Bild/Video nicht richtig gelden wurde
         </li>
       </ul>
+    </div>
+    <h2>Tabellen</h2>
+    <table>
+      <thead>
+        <th scope="row">Befehl</th>
+        <th scope="row">Erklärung des Befehls</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lttable&gt</td>
+          <td>Erzeugt eine Tabelle</td>
+        </tr>
+        <tr>
+          <td>&ltth&gt</td>
+          <td>Erzeugt eine Überschrift => Table headline</td>
+        </tr>
+        <tr>
+          <td>&ltthead&gt</td>
+          <td>Erzeugt die "table head" Umgebung, die ähnlich zur HTML-head Umgebung ist.</td>
+        </tr>
+        <tr>
+          <td>&lttbody&gt</td>
+          <td>Erzeugt die "table body" Umgebung, die ähnlich zur HTML-body Umgebung ist.</td>
+        </tr>
+        <tr>
+          <td>&lttr&gt</td>
+          <td>Erzeugt eine Reihe in der Tabelle => Table row</td>
+        </tr>
+        <tr>
+          <td>&lttd&gt</td>
+          <td>Tabelleneintrag => Table data</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td>&lttfoot&gt</td>
+        <td>Letzte Zeile in der Tabelle => Table foot</td>
+      </tfoot>
+    </table>
+    <div>
+      <h2>HTML Semantik</h2>
+      <p>
+        &ltheader&gt, &ltnav&gt, &ltmain&gt and &ltfooter&gt
+        sind für die allgemeine Struktur von HTML-Dokumenten zuständig.
+        <br>
+        <br>
+        &ltsection&gt ist dafür da, um Dinge wie Textabschnitte, Überschriften oder andere
+        Umgebungselemente zu umschließen.
+        <br>
+        <br>
+        &ltarticle&gt enthält Inhalte wie Artikel, Blogs, Kommentare usw.
+      </p>
+    </div>
+    <div>
+      <a href="04-formulare-timo.html">Hier gehts zu den Formularen ==></a>
     </div>
   </body>
 </html>

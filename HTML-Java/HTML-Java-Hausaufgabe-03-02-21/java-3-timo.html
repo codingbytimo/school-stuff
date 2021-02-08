@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="java-3-timo.css">
+    <title>Document</title>
+</head>
+<body>
+  <h1>Java Zusammenfassung, Buch 5.3.5-.5.3.8</h1>
+    <h2>Verknüpfung von Zeichenketten</h2>
+    <ul>
+<li>Zeichenketten werden in Java mit einem "+" verknüpft</li>
+    </ul>
+ <h2>Berechnete Ausgaben</h2>
+ <ul>
+    <li>
+     In den Klammern des Befehls "System.out.println()" kann gerechnet werden. 
+     Es muss jedoch darauf geachtet werden, dass die richtigen Datentypen verwendet werden. 
+     Genutzt werden die Grundrechenoperatoren: <br>
+     <br>
+     "+", "-", "*", "/"
+    </li>
+  <h3>Reihenfolge der Abarbeitung</h3>
+    <li>Die Rechnungen werden von links nach rechts bearbeitet</li>
+  </ul>
+  <div>
+    <img class="img1" src="java1.png" alt="bild1">
+  </div>
+  <div>
+    <img class="img2" src="java2.png" alt="bild2">
+  </div>
+  <div>
+    <img class="img3" src="java3.png" alt="bild3">
+  </div>
+  <div>
+    Bilder netterweise von Björn bereitgestellt.
+  </div>
+  <div>
+    <h1>5.3.7 Operatoren</h1>
+    <h2>Rechnen mit Operatoren</h2>
+    Hier die verschiedenen Operatoren in Java und was sie machen:
+    <table border="1">
+      <thead><tr><th scope="col">Operator</th>
+      <th scope="col">Beispiel</th>
+      <th scope="col">Erklärung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td>+</td>
+      <td>a + b</td>
+      <td>Addition: Summe von a und b</td>
+      </tr>
+      <tr>
+      <td>-</td>
+      <td>a - b</td>
+      <td>Subtraktion: Differenz an a und b</td>
+      </tr>
+      <tr>
+      <td>*</td>
+      <td>a * b</td>
+      <td>Multiplikation: Produkt von a und b</td>
+      </tr>
+      <tr>
+      <td>/</td>
+      <td>a / &nbsp;b</td>
+      <td>Division: Quotient von a und b</td>
+      </tr>
+      <tr>
+      <td>%</td>
+      <td>a % b</td>
+      <td>Modulo: Rest einer ganzzahligen Division von a durch b</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <div>
+    Es gibt auch noch andere Operatoren, <br>
+    darunter fällt dann das Inkrementieren und Dekrementieren:
+  </div>
+  <div>
+    <table border="1">
+      <thead><tr><th scope="col">Operator</th>
+      <th scope="col">Beispiel</th>
+      <th scope="col">Erklärung</th>
+      </tr>
+    </thead>
+    <tbody>
+      </tr>
+      <tr>
+      <td>++</td>
+      <td>
+      <p>a++</p>
+      <p>++a</p>
+      </td>
+      <td>
+      <p>Postinkrement: Der Ausdruck behält ursprünglichen Wert. Der Wert von a wurde um 1 erhöht</p>
+      <p>Präinkrement: Der Wert von a wird um 1 erhöht und der Ausdruck erhält den erhöhten Wert von a</p>
+      </td>
+      </tr>
+      <tr>
+      <td>--</td>
+      <td>
+      <p>a--</p>
+      <p>--a</p>
+      </td>
+      <td>
+      <p>Postdekrement: Der Ausdruck behält ursprünglichen Wert. Der Wert von a wurde um 1 erniedrigt</p>
+      <p>Prädekrement: Der Wert von a wird um 1 erniedrigt und der Ausdruck erhält den verminderten Wert von a</p>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div>
+    Hier hätten wir noch die sogenannten "boolschen Operatoren", <br>
+    auch "Vergleichsoperatoren genannt":
+  </div>
+  <div>
+    <table border="1">
+      <thead><tr><th scope="col">Operator</th>
+      <th scope="col">Beispiel</th>
+      <th scope="col">Erklärung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td>==</td>
+      <td>x == y</td>
+      <td>ist x gleich y?</td>
+      </tr>
+      <tr>
+      <td>!=</td>
+      <td>x != y</td>
+      <td>ist x ungleich y?</td>
+      </tr>
+      <tr>
+      <td>&lt;</td>
+      <td>x &lt; y</td>
+      <td>ist x kleiner als y?</td>
+      </tr>
+      <tr>
+      <td>&lt;=</td>
+      <td>x &lt;= y</td>
+      <td>ist x kleiner oder gleich y?</td>
+      </tr>
+      <tr>
+      <td>&gt;</td>
+      <td>x &gt; y</td>
+      <td>ist x größer als y?</td>
+      </tr>
+      <tr>
+      <td>&gt;=</td>
+      <td>x &gt;= y</td>
+      <td>ist x größer oder gleich y?</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div>
+    <h1>5.3.8 Typumwandlung</h1>
+    <p>
+      Wenn man mit 2 Variablen rechnet, die unterschiedliche Datentypen haben,
+      dann muss das Ergebnis mindestens einem dieser beiden Typen entsprechen. <br>
+      Deshalb gibt es die Typumwandlung, auch Typecasting genannt. <br>
+      Auf dem Bild hier wird gezeigt, wie in Java verschiedene Datentypen konvertiert werden:
+    </p>
+    <div>
+      <img src="java-typecasting.jpg" alt="Java Typecasting">
+    </div>
+    <p>
+      Hinweis: Eine Typumwandlung von dem boolean-Datentyp in einen anderen primitiven Datentyp ist nicht zulässig.
+    </p>
+  </div>
+  <div>
+    <p>
+      Zur Aufgabe für 3.5.8: <br>
+      <br>
+      Keine Ahnung <br>
+      wie man das <br>
+      lösen soll.
+    </p>
+  </div>
+</body>
+</html>
