@@ -21,6 +21,15 @@ h1:hover {
     background: #3c95dd;
 }
 
+a {
+    font-family: Fira Code;
+    color: #2ecc71;
+  }
+
+.copyright {
+    font-size: 12px;
+}
+
 span {
     display: inline-block;
     margin: 20px 0;

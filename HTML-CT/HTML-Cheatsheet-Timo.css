@@ -52,6 +52,10 @@ a {
 .yellow {
   color:  #f39c12;
 }
+
+.copyright {
+  font-size: 12px;
+}
   
 table {
   height: 40%;
