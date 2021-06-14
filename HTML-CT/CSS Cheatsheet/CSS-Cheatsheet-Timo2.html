@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS-Cheatsheet-Timo.css">
+    <title>Timo's CSS Cheatsheet</title>
+</head>
+
+<body>
+    <!--Erzeugt eine "Außentabelle, damit der Hintergrund weiß erscheint"-->
+    <table width=" 100%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+            <tr>
+                <td width="32%" valign="top">
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Abmess­ungen</h3>
+                        <div>
+                            <table cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>heig­ht</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">auto;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Höhe (Standard)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">100px;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">20%;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">5.0em;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>min-­hei­ght</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(siehe height)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">minimale Höhe</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>max-­hei­ght</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(siehe height)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">maximale Höhe</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>width</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(siehe height)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Breite</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>min-­wid­th</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(siehe height)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">minimale Breite</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>max-­wid­th</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(siehe height)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">maximale Breite</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Positi­oni­erung</h3>
+                        <div>
+                            <table cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>posi­tion</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">static;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Standard</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">relative;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">relativ zur ursprü­ng­­lichen
+                                                Position</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">absolute;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">abhängig vom Eltern­­el­ement</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">fixed;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">abhängig vom Browse­r­f­en­ster</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>top</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">auto;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Standard</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bott­om</strong>:</div>
+                                        </td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">100px;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>left</strong>:</div>
+                                        </td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">20%;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>right</strong>:</div>
+                                        </td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">-2.0em;</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <div style="padding: 3px 8px;"><em>top</em>, <em>bottom</em>, <em>left</em>,
+                                    <em>right</em> werden nur bei <em>position: relative</em>, <em>absolute</em>
+                                    und <em>fixed</em> beachtet.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Floating</h3>
+                        <div>
+                            <table cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>float</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">none;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Standard</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">left;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Element steht links und wird rechts
+                                                um­flossen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">right:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Element steht rechts und wird links
+                                                um­flo­ssen.</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>clear</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">none;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Standard</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">left;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Aufheben des Um­fli­eßens links</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">right;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Aufheben des Um­fli­eßens links</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">both;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Aufheben beid­s­eitigen Um­fli­e­ßens
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h4 class="Farbe">Farbe</h4>
+                        <div>
+                            <table cellspacing="0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>color</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">red;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Vorder­­gr­und­­farbe (Text)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">#789ABC;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">hexade­zi­­maler Farb­wert</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">rgb(0,­25,50);</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">RGB-Fa­rb­­werte</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">
+                                                <strong>back­gro­und­-co­lor</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(siehe color)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Hinter­­gr­und­­farbe</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Kommentar</h3>
+                        <div>
+                            <table " cellspacing=" 0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="1" valign="top">
+                                            <div style="padding: 3px 8px;">/<strong><em>* Kommen­tartext
+                                                    </em></strong>*/</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </td>
+                <td _column_spacer" width="2%">&nbsp;</td>
+                <td _sortable cheat_sheet_output_column_2" width="32%" valign="top">
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Textfo­rma­tierung</h3>
+                        <div>
+                            <table " cellspacing=" 0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>font­-fa­mily</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">"­Times New Roman"</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Schriftart (Times)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Arial, Helvetica, sans-s­erif;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">serife­n­lose Schrift</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>font­-si­ze</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">12pt;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Schrif­t­größe (Punkt)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">10px;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Pixel</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">1.0em;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">relativ zum Eltern­­el­ement</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">120%;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">relativ zur Grund­­größe</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>font­-st­yle</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">normal;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Schrif­tstil (Standard)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">italic;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">kursiv</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">oblique;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">schräg</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>font­-we­ight</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">lighter;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Schrif­tstärke (dünn)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">normal;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Standard</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">bold;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">bolder;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>line­-he­ight</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">normal;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Zeilenhöhe (Standard)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">14pt</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Punkt</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">20px</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Pixel</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">120%</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">relativ zur Schrif­t­größe</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">1.2em;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">relativ zum Eltern­­el­e­ment</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>lett­er-­spa­cing</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">normal;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Zeiche­n­a­bstand (Stan­­dard)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">0.05em;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">relativ zum Eltern­­el­ement</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>text­-al­ign</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">left;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Ausric­htung (Stan­­dard)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">right;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">center;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">zentriert</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">justify;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Blocksatz</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>text­-de­cor­ati­on</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">none;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Schrif­t­a­us­­zei­ch­nung
+                                                (Stan­­dard)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">underline;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">unter­­str­ichen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">line-t­hrough;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">durch­­ge­­str­ichen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>text­-in­dent</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">1.0em;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Einrückung</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td colspan="2" valign="top">
+                                            <div style="padding: 3px 8px;">10%;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>text­-tr­ans­form</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">none;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Textau­s­z­eic­h­nung (Stan­­dard)
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">capita­lize;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Kapitä­lchen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">uppercase;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Groß­b­uch­­staben</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">lowercase;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Klein­­buc­h­s­tstaben</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </td>
+                <td _column_spacer" width="2%">&nbsp;</td>
+                <td _sortable cheat_sheet_output_column_3" width="32%" valign="top">
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Innena­bstand</h3>
+                        <div>
+                            <table " cellspacing=" 0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>padd­ing</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">0;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">keiner</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">2px 4px;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">2 Pixel oben u. unten, 4 Pixel rechts
+                                                u. links</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">1pt 2px 3% 4.0em;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand oben, rechts, unten, links
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>padd­ing­-top</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">10px;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand oben</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>padd­ing­-bo­ttom</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s.o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand unten</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>padd­ing­-le­ft</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s.o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand links</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>padd­ing­-ri­ght</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s.o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand rechts</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Aussen­abstand</h3>
+                        <div>
+                            <table " cellspacing=" 0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>marg­in</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">0;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">keiner</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">10px 20px;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. padding)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">1pt 2px 3% -4.0em;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. padding)</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>marg­in-­top</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">10px;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand oben</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>marg­in-­bot­tom</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand unten</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>marg­in-­left</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand links</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>marg­in-­rig­ht</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Abstand rechts</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                                <div style="padding: 3px 8px;">AuÃŸen­abs­tÃ¤nde dÃ¼rfen auch negative Werte
+                                    annehmen.</div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="z-index: 30; page-break-inside: avoid;">
+                        <h3>Rahmen</h3>
+                        <div>
+                            <table " cellspacing=" 0" cellpadding="0" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">1px solid;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Rahmen 1 Pixel Stärke</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">thin dotted red;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">dünner, roter und gepunk­­teter
+                                                Rah­men</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">&nbsp;</td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">0.2em dashed #D0D0D0;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">gestri­chelter grauer Rahmen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er-­top</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">oberer Rahmen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er-­bot­tom</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">unterer Rahmen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er-­left</strong>:</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">linker Rahmen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er-­rig­ht</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">(s. o.)</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">rechter Rahmen</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er-­wei­ght</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">1px 2px 3px 4px;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Rahmen­stärke</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er-­sty­le</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">solid;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Rahmenstil</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;"><strong>bord­er-­col­or</strong>:
+                                            </div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">black gray silver white;</div>
+                                        </td>
+                                        <td valign="top">
+                                            <div style="padding: 3px 8px;">Rahmen­farbe</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    <br>
+                    <div>
+                        <p>==> Wild <==</p>
+                        <p class="copyright">&copy Timo Kochanski 2021</p>
+                      </div>
+</body>
+</html>
