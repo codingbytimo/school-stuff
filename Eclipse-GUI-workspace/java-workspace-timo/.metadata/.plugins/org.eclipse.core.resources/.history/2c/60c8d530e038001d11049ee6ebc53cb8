@@ -1,0 +1,81 @@
+package gui;
+
+import javax.swing.*;
+
+import java.awt.BorderLayout;
+import java.awt.Cursor;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MainGUI extends Frame implements ActionListener {
+	
+	JFrame Fenster;
+	JTextField textFeld;
+	JLabel text;
+	JButton Knopf;
+	JProgressBar progressBar;
+	int pValue = 0;
+	
+	public MainGUI() {
+		
+		Fenster = new JFrame("GUI Testprogramm");
+		Fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Fenster.setResizable(true);
+		Fenster.setLocation(250, 250);
+		
+		textFeld = new JTextField();
+		textFeld.setBounds(50, 50, 150, 20);
+		
+		text = new JLabel("Hallo, ich bin ein JLabel!");
+		text.setBounds(50, 102, 400, 20);
+		
+		Knopf = new JButton("Cursor ändern!");
+		Knopf.setBounds(50, 150, 95, 30);
+		Knopf.setSize(400, 100);
+		Knopf.addActionListener(this);
+		
+		Fenster.getContentPane().add(textFeld);
+		Fenster.getContentPane().add(text);
+		Fenster.getContentPane().add(Knopf);
+		
+		Fenster.setSize(1000, 750);
+		Fenster.getContentPane().setLayout(null);
+		
+		JLabel lblE = new JLabel("");
+		lblE.setBounds(50, 300, 139, 14);
+		Fenster.getContentPane().add(lblE);
+		
+		progressBar = new JProgressBar();
+		progressBar.setBounds(50, 300, 400, 14);
+		Fenster.getContentPane().add(progressBar);
+		Fenster.setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		
+		new MainGUI();
+		
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		try {
+	        Fenster.setCursor(new Cursor(Cursor.WAIT_CURSOR));
+	        if (pValue < 100){
+	        	pValue = pValue + 5;
+	        }
+	        if(pValue > 100) {
+	        	pValue = 0;
+	        }
+	        progressBar.setValue(pValue);
+	        text.setText("Der Mauszeiger wurde geändert!");  
+	        }
+		
+		catch(Exception ex) {
+			text.setText("Kann den Cursor nicht ändern.");
+			System.out.println(ex);
+			}  
+		
+	}
+}
