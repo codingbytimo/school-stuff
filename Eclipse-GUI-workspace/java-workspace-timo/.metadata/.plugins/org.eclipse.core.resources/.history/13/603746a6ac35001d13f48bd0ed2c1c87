@@ -1,0 +1,40 @@
+package gui;
+
+import javax.swing.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MainGUI implements ActionListener {
+	
+	public MainGUI() {
+		JFrame Fenster = new JFrame("Hallo");
+		Fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Fenster.setResizable(true);
+		Fenster.setLocation(250, 250);
+		
+		JButton Knopf = new JButton("Klick auf mich!");
+		Knopf.setBounds(400, 100, 80, 40);
+		Knopf.setSize(300, 50);
+		Knopf.addActionListener((event) -> System.exit(0));
+		Fenster.add(Knopf);
+		
+		Fenster.setSize(1000, 750);
+		Fenster.setLayout(null);
+		Fenster.setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		
+		new MainGUI();
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

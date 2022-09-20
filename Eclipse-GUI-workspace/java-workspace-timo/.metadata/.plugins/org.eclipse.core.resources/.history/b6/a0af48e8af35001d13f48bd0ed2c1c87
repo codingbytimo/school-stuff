@@ -1,0 +1,63 @@
+package gui;
+
+import javax.swing.*;
+
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MainGUI extends Frame implements ActionListener {
+	
+	JPanel Panel;
+	JTextField textFeld;
+	JLabel text;
+	JButton Knopf;
+	
+	public MainGUI() {
+		
+		JFrame Fenster = new JFrame("Mein Testfenster");
+		Fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Fenster.setResizable(true);
+		Fenster.setLocation(250, 250);
+		
+		Panel = new JPanel(new BorderLayout());
+		
+		textFeld = new JTextField();
+		textFeld.setBounds(100, 100, 150, 20);
+		
+		text = new JLabel();
+		text.setBounds(50,150,95,30);
+		
+		/*Knopf = new JButton("IP herausfinden");
+		Knopf.setBounds(400, 100, 80, 40);
+		Knopf.setSize(400, 400);
+		Knopf.addActionListener(this);*/
+		
+		Fenster.add(textFeld);
+		Fenster.add(text);
+		//Fenster.add(Knopf);
+		
+		
+		Fenster.setSize(1000, 750);
+		Fenster.setLayout(null);
+		Fenster.setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		
+		new MainGUI();
+		
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		try{  
+	        String host = textFeld.getText();  
+	        String ip = java.net.InetAddress.getByName(host).getHostAddress();  
+	        text.setText("IP of " + host + " is: " + ip);  
+	        }catch(Exception ex){System.out.println(ex);}  
+		
+	}
+
+}

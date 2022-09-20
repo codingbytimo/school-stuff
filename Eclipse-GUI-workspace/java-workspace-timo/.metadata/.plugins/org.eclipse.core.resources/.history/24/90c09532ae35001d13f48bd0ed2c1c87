@@ -1,0 +1,52 @@
+package gui;
+
+import javax.swing.*;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MainGUI implements ActionListener {
+	
+	public MainGUI() {
+		JFrame Fenster = new JFrame("Mein Testfenster");
+		Fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		Fenster.setResizable(true);
+		Fenster.setLocation(250, 250);
+		
+		JTextField textFeld = new JTextField();
+		textFeld.setBounds(50,50, 150,20);
+		
+		JLabel text = new JLabel();
+		text.setBounds(50,150,95,30);
+		
+		JButton Knopf = new JButton("Klick auf mich!");
+		Knopf.setBounds(400, 100, 80, 40);
+		Knopf.setSize(300, 50);
+		Knopf.addActionListener((event) -> System.exit(0));
+		Fenster.add(Knopf);
+		
+		panel = new JPanel()
+		
+		Fenster.setSize(1000, 750);
+		Fenster.setLayout(null);
+		Fenster.setVisible(true);
+	}
+	
+	public static void main(String[] args){
+		
+		new MainGUI();
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		try{  
+	        String host=tf.getText();  
+	        String ip=java.net.InetAddress.getByName(host).getHostAddress();  
+	        l.setText("IP of "+host+" is: "+ip);  
+	        }catch(Exception ex){System.out.println(ex);}  
+		
+	}
+
+}
