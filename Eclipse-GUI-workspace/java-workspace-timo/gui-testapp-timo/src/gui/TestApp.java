@@ -7,12 +7,18 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JLabel;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
+import javax.swing.event.ChangeListener;
 import javax.swing.JCheckBox;
+import javax.swing.JColorChooser;
 import javax.swing.JRadioButton;
+import javax.swing.JList;
+import javax.swing.JSlider;
+import javax.swing.JProgressBar;
 
 public class TestApp implements ActionListener {
 
@@ -27,6 +33,7 @@ public class TestApp implements ActionListener {
 	private JLabel lblDebugLog;
 	private JButton btnKnopf;
 	private JLabel label;
+	private JColorChooser farben;
 	
 	/**
 	 * Launch the application.
@@ -73,6 +80,17 @@ public class TestApp implements ActionListener {
             (JTabbedPane.TOP,JTabbedPane.SCROLL_TAB_LAYOUT );
  
         tabpane.addTab("Ich bin rot", panelRot);
+        panelRot.setLayout(null);
+        
+        JProgressBar progressBar = new JProgressBar();
+        progressBar.setBounds(10, 94, 414, 14);
+        panelRot.add(progressBar);
+        
+        JButton btnMehr = new JButton("Mehr");
+        btnMehr.setBounds(10, 119, 89, 23);
+        btnMehr.addActionListener(e -> progressBar.setValue((int) Math.random()));
+        panelRot.add(btnMehr);
+        
         tabpane.addTab("Ich bin blau", panelBlue);
         tabpane.addTab("Ich bin grün", panelGreen);
         tabpane.addTab("Spass", panelSpass);
@@ -108,6 +126,9 @@ public class TestApp implements ActionListener {
         rdbtnPunktknopf.setBounds(61, 125, 109, 23);
         panelSpass.add(rdbtnPunktknopf);
         
+        JSlider slider = new JSlider();
+        slider.setBounds(61, 155, 200, 26);
+        panelSpass.add(slider);
         frame.getContentPane().add(tabpane);
 		
 	}
