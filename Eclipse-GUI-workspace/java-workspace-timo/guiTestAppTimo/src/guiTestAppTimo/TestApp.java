@@ -1,4 +1,4 @@
-package guiTestAppTimo;
+package javaGuiTimo;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -52,12 +52,12 @@ public class TestApp implements ActionListener {
 	private JColorChooser farben;
 	private JComboBox comboBox;
 	
-	String comboBoxListe[] = {"Baden-W¸rttemberg", "Bayern",
+	String comboBoxListe[] = {"Baden-WÔøΩrttemberg", "Bayern",
             "Berlin", "Brandenburg", "Bremen",
             "Hamburg", "Hessen", "Mecklenburg-Vorpommern",
             "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz",
             "Saarland", "Sachsen", "Sachsen-Anhalt",
-            "Schleswig-Holstein", "Th¸ringen"};
+            "Schleswig-Holstein", "ThÔøΩringen"};
 	private JPasswordField passwordField;
 	
 	/**
@@ -107,11 +107,11 @@ public class TestApp implements ActionListener {
         panelRot.setLayout(null);
         
         tabpane.addTab("Ich bin blau", panelBlue);
-        tabpane.addTab("Ich bin gr¸n", panelGreen);
+        tabpane.addTab("Ich bin grÔøΩn", panelGreen);
         tabpane.addTab("Komponenten", panelSpass);
         
         btnKnopf = new JButton("Knopf");
-        btnKnopf.setBounds(61, 36, 85, 23);
+        btnKnopf.setBounds(61, 26, 85, 23);
         btnKnopf.setForeground(Color.WHITE);
         btnKnopf.setBackground(Color.DARK_GRAY);
         btnKnopf.addActionListener(e -> System.exit(0));
@@ -138,8 +138,8 @@ public class TestApp implements ActionListener {
         label.setBounds(61, 114, 0, 0);
         panelSpass.add(label);
         
-        lblGutenTag = new JLabel("Guten Tag. Rechtsklick f\u00FCr mehr Zeugs");
-        lblGutenTag.setBounds(61, 11, 288, 14);
+        lblGutenTag = new JLabel("JButton");
+        lblGutenTag.setBounds(61, 10, 85, 14);
         panelSpass.add(lblGutenTag);
         
         JTextArea txtrTextEingebenBitte = new JTextArea();
@@ -149,26 +149,26 @@ public class TestApp implements ActionListener {
         txtrTextEingebenBitte.setBackground(Color.WHITE);
         panelSpass.add(txtrTextEingebenBitte);
         
-        JCheckBox chckbxCheck = new JCheckBox("gib Check");
+        JCheckBox chckbxCheck = new JCheckBox("JCheckBox");
         chckbxCheck.setBounds(61, 99, 97, 23);
         panelSpass.add(chckbxCheck);
         
-        JRadioButton rdbtnPunktknopf = new JRadioButton("Punktknopf");
+        JRadioButton rdbtnPunktknopf = new JRadioButton("JRadioButton");
         rdbtnPunktknopf.setBounds(61, 125, 109, 23);
         panelSpass.add(rdbtnPunktknopf);
         
         JSlider slider = new JSlider();
-        slider.setBounds(61, 155, 200, 26);
+        slider.setBounds(61, 164, 200, 26);
         slider.setBackground(Color.WHITE);
         panelSpass.add(slider);
         
         comboBox = new JComboBox(comboBoxListe);
-        comboBox.setBounds(61, 208, 171, 20);
+        comboBox.setBounds(61, 219, 171, 20);
         comboBox.setForeground(Color.WHITE);
         comboBox.setBackground(Color.GRAY);
         panelSpass.add(comboBox);
         
-        BufferedImage myPicture;
+        /*BufferedImage myPicture;
 		try {
 			myPicture = ImageIO.read(new File("C:\\Users\\T.Kochanski.AD\\Desktop\\java-workspace-timo\\guiTestAppTimo\\src\\ressources\\spriteBottle.png"));
 			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
@@ -176,12 +176,22 @@ public class TestApp implements ActionListener {
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
-		}
+		}*/
         
-        JLabel lblBundeslnderDeutschland = new JLabel("Bundesl\u00E4nder Deutschland:");
-        lblBundeslnderDeutschland.setBounds(61, 183, 171, 14);
+        JLabel lblBundeslnderDeutschland = new JLabel("JComboBox Bundesl√§nder:");
+        lblBundeslnderDeutschland.setBounds(61, 200, 171, 14);
         panelSpass.add(lblBundeslnderDeutschland);
+        
+        JLabel lblNewLabel = new JLabel("JTextField");
+        lblNewLabel.setBounds(59, 59, 87, 13);
+        panelSpass.add(lblNewLabel);
+        
+        JLabel lblNewLabel_1 = new JLabel("JSlider");
+        lblNewLabel_1.setBounds(61, 154, 45, 13);
+        panelSpass.add(lblNewLabel_1);
         frame.getContentPane().add(tabpane);
+        
+        
 		
 	}
 
