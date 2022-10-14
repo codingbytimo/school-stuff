@@ -2,6 +2,7 @@ package guiTimoMVC;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.EventQueue;
 import java.awt.TextField;
@@ -21,17 +22,21 @@ import javax.swing.JSeparator;
 import javax.swing.JSlider;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
 import guiTimoMVC.Controller;
 
 public class View extends JFrame {
 	
+	private Controller c = new Controller(this);
+	
 	// JPanel Deklaration
 	private JPanel panelRot;
 	private JPanel panelBlue;
 	private JPanel panelGreen;
-	private JPanel panelSpass;
+	private JPanel panelSimple;
 	private JPanel panelComplex;
 	private JTabbedPane tabpane;
 	
@@ -55,7 +60,8 @@ public class View extends JFrame {
 	private JColorChooser farben;
 	private JComboBox comboBox;
 	private JLabel lblCount;
-	private TextField tfCount;
+	private JTextField tfCount;
+	private JTextField tfSimple;
 	private JEditorPane EditorPane;
 	private JPasswordField passwordField;
 	private JSeparator separator_1;
@@ -64,47 +70,21 @@ public class View extends JFrame {
 	private JSlider slider;
 	private JSeparator separator;
 	
-	//int ViewCount = Controller.getCount();
-	
 	String comboBoxListe[] = {"Baden-Wuerrttemberg", "Bayern",
             "Berlin", "Brandenburg", "Bremen",
             "Hamburg", "Hessen", "Mecklenburg-Vorpommern",
             "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz",
             "Saarland", "Sachsen", "Sachsen-Anhalt",
             "Schleswig-Holstein", "Thueringen"};
-	//private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public void initView() {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					View frame = new View();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
+	
 	public View() {
-		initView();
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		// Einstellungen fuer das Fenster
 		setBounds(300, 100, 650, 500);
-		/*contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
-		setContentPane(contentPane);*/
 		
 		// Erstellen aller UI Komponenten
 		
-		// Panel
+		// Panels
 		tabpane = new JTabbedPane
                 (JTabbedPane.TOP,JTabbedPane.SCROLL_TAB_LAYOUT );
 		panelRot = new JPanel();
@@ -114,23 +94,23 @@ public class View extends JFrame {
         panelBlue.setBackground(Color.BLUE);
         panelGreen = new JPanel();
         panelGreen.setBackground(Color.GREEN);
-        panelSpass = new JPanel();
-        panelSpass.setLayout(null);
+        panelSimple = new JPanel();
+        panelSimple.setLayout(null);
         panelComplex = new JPanel();
         panelComplex.setLayout(null);
         
         // PopUp Menu
         popupMenu = new JPopupMenu();
         popupMenu.setBounds(-10008, -10053, 121, 77);
-        Controller.addPopup(panelSpass, popupMenu);
+        c.addPopup(panelSimple, popupMenu);
         
         // Buttons
         btnBack = new JButton("Noch ein Knopf");
         btnKnopf = new JButton("Knopf");
-        btnKnopf.setBounds(61, 26, 85, 23);
+        btnKnopf.setBounds(61, 30, 85, 23);
         btnKnopf.setForeground(Color.WHITE);
         btnKnopf.setBackground(Color.DARK_GRAY);
-        panelSpass.add(btnKnopf);
+        panelSimple.add(btnKnopf);
         btnCount = new JButton("Hochzaehlen");
         btnCount.setSize(120, 20);
         btnCount.setLocation(160, 25);
@@ -138,7 +118,7 @@ public class View extends JFrame {
         panelComplex.add(btnCount); 
         rdbtnPunktknopf = new JRadioButton("JRadioButton");
         rdbtnPunktknopf.setBounds(61, 125, 109, 23);
-        panelSpass.add(rdbtnPunktknopf);
+        panelSimple.add(rdbtnPunktknopf);
         
         // PasswordField
         passwordField = new JPasswordField();
@@ -148,17 +128,17 @@ public class View extends JFrame {
         label = new JLabel("");
         lblGutenTag = new JLabel("JButton");
         lblGutenTag.setBounds(61, 10, 85, 14);
-        panelSpass.add(lblGutenTag);
+        panelSimple.add(lblGutenTag);
         txtrTextEingebenBitte = new JTextArea();
         lblBundeslnderDeutschland = new JLabel("JComboBox Bundeslaender:");
         lblBundeslnderDeutschland.setBounds(325, 70, 171, 14);
-        panelSpass.add(lblBundeslnderDeutschland);
+        panelSimple.add(lblBundeslnderDeutschland);
         lblNewLabel = new JLabel("JTextField");
-        lblNewLabel.setBounds(61, 55, 87, 13);
-        panelSpass.add(lblNewLabel);
+        lblNewLabel.setBounds(61, 60, 87, 13);
+        panelSimple.add(lblNewLabel);
         lblNewLabel_1 = new JLabel("JSlider");
         lblNewLabel_1.setBounds(325, 11, 45, 13);
-        panelSpass.add(lblNewLabel_1);
+        panelSimple.add(lblNewLabel_1);
         lblCount = new JLabel("Zaehler");
         lblCount.setSize(50, 20);
         lblCount.setLocation(50, 25);
@@ -166,36 +146,39 @@ public class View extends JFrame {
         popUpLabel = new JLabel("Das ist ein PopUp Menu");
         
         // TextField
-        /*tfCount = new TextField(ViewCount + "", 10);
+        tfCount = new JTextField(c.getCount() + "", 10);
         tfCount.setSize(50, 20);
         tfCount.setLocation(105, 25);
         tfCount.setEditable(false);
-        panelComplex.add(tfCount);*/
+        panelComplex.add(tfCount);
+        tfSimple = new JTextField();
+        tfSimple.setBounds(61, 80, 85, 14);
+        panelSimple.add(tfSimple);
         
         // CheckBox
         chckbxCheck = new JCheckBox("JCheckBox");
         chckbxCheck.setBounds(61, 99, 97, 23);
-        panelSpass.add(chckbxCheck);
+        panelSimple.add(chckbxCheck);
         
         // Slider
         slider = new JSlider();
         slider.setBounds(325, 30, 200, 26);
         slider.setBackground(Color.WHITE);
-        panelSpass.add(slider);
+        panelSimple.add(slider);
         
         // comboBox
         comboBox = new JComboBox(comboBoxListe);
         comboBox.setBounds(325, 90, 171, 20);
         comboBox.setForeground(Color.WHITE);
         comboBox.setBackground(Color.GRAY);
-        panelSpass.add(comboBox);
+        panelSimple.add(comboBox);
         
         // Separator
         separator = new JSeparator();
         separator.setForeground(new Color(160, 160, 160));
         separator.setBackground(new Color(0, 0, 0));
         separator.setBounds(35, 160, 550, 10);
-        panelSpass.add(separator);
+        panelSimple.add(separator);
         separator_1 = new JSeparator();
         separator_1.setBackground(new Color(0, 0, 0));
         separator_1.setForeground(new Color(128, 128, 128));
@@ -230,11 +213,27 @@ public class View extends JFrame {
         tabpane.addTab("Ich bin rot", panelRot);
         tabpane.addTab("Ich bin blau", panelBlue);
         tabpane.addTab("Ich bin gruen", panelGreen);
-        tabpane.addTab("einfache Komponenten", panelSpass);
+        tabpane.addTab("einfache Komponenten", panelSimple);
         tabpane.addTab("komplexe Komponenten", null, panelComplex, null);
         
         // Hinzufuegen aller Komponenten in den JFrame
         getContentPane().add(tabpane);
+	}
+	
+	public Component getPanelSimple() {
+		return panelSimple;
+	}
+	
+	public JTextField getTfCount() {
+		return tfCount;
+	}
+	
+	public JButton getBtnKnopf() {
+		return btnKnopf;
+	}
+	
+	public JButton getBtnCount() {
+		return btnCount;
 	}
 
 }
