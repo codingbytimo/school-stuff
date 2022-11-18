@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import java.awt.BorderLayout;
 import javax.swing.JTable;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 public class View extends JFrame {
 	
@@ -14,19 +15,39 @@ public class View extends JFrame {
 	public View() {
 		
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(500, 120);
+		setSize(500, 250);
 		getContentPane().setLayout(new BorderLayout(0, 0));
 		setTitle("MVC Table - Timo");
 		table = new JTable();
 		getContentPane().add(table, BorderLayout.CENTER);
 		
+		JPanel panel = new JPanel();
+		getContentPane().add(panel, BorderLayout.SOUTH);
+		
 		btnAppend = new JButton("Append");
-		getContentPane().add(btnAppend, BorderLayout.SOUTH);
+		panel.add(btnAppend);
+		
 		btnDelete = new JButton("Delete");
-		getContentPane().add(btnAppend, BorderLayout.SOUTH);
+		panel.add(btnDelete);
 		
 	}
 	
+	public JButton getBtnAppend() {
+		return btnAppend;
+	}
+
+	public void setBtnAppend(JButton btnAppend) {
+		this.btnAppend = btnAppend;
+	}
+
+	public JButton getBtnDelete() {
+		return btnDelete;
+	}
+
+	public void setBtnDelete(JButton btnDelete) {
+		this.btnDelete = btnDelete;
+	}
+
 	public JTable getTable() {
 		return table;
 	}

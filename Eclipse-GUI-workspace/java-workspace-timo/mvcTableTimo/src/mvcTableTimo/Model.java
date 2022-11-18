@@ -1,6 +1,7 @@
 package mvcTableTimo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -8,11 +9,18 @@ public class Model extends AbstractTableModel {
 	
 		private View view;
 		private Person person;
-		ArrayList<Person> data;
 		
 		String[] columnNames = {"Vorname", 
 				"Nachname",
 				"Klasse"};
+		
+		ArrayList<Person> data = new ArrayList<>(
+		Arrays.asList( 
+				new Person("Peter", "Mustermann", "TG12/1"), 
+				new Person("Sandra", "Schmidt","TG12/1"), 
+				new Person("Tobias", "Müller","TG12/3") 
+		)
+		);
 
 		@Override
 		public int getColumnCount() {
@@ -26,7 +34,21 @@ public class Model extends AbstractTableModel {
 
 		@Override
 		public Object getValueAt(int row, int col) {
-			return data[row][col];
+			Object value = null;
+			switch (col) {
+			case 0:
+				value = data.get(row).getVorname();
+				break;
+			case 1:
+				value = data.get(row).getNachname();
+				break;
+			case 2:
+				value = data.get(row).getKlasse();
+				break;
+			default:
+				break;
+			}
+			return value;
 		}
 		
 		Class[] columns = new Class[] {String.class,
@@ -38,21 +60,44 @@ public class Model extends AbstractTableModel {
 		}
 		
 		public boolean isCellEditable(int row, int col) {
-			if (col == 1) {
-	            return true;
-	        } else {
-	            return false;
-	        }
+			return true;
 		}
 
 		public void setValueAt(Object value, int row, int col) {
-			data[row][col] = value;
+			switch (col) {
+			case 0:
+				data.get(row).setVorname((String)value);
+				break;
+			case 1:
+				data.get(row).setNachname((String)value);
+				break;
+			case 2:
+				data.get(row).setKlasse((String)value);
+				break;
+			default:
+				break;
+			}
 	        fireTableCellUpdated(row, col);
 		}
 		
 		public void addElements() {
-			data = new ArrayList<>(3);
 			data.add(new Person("Peter", "Lustig", "TG 12/3"));
+		}
+		
+		public ArrayList<Person> getData() {
+			return data;
+		}
+		
+		public void appendEmptyRow() {
+			data.add(new Person("", "", ""));
+			int count = getRowCount();
+			fireTableRowsInserted(count-1, count-1); 
+		}
+		
+		public void deleteRow(int rowIndex) {
+			data.remove(rowIndex);
+			int count = getRowCount();
+			fireTableRowsDeleted(count-1, count-1);
 		}
 		
 }
