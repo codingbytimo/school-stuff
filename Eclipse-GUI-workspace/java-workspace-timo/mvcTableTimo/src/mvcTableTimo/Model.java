@@ -9,18 +9,23 @@ public class Model extends AbstractTableModel {
 	
 		private View view;
 		private Person person;
+		private Controller controller;
 		
 		String[] columnNames = {"Vorname", 
 				"Nachname",
 				"Klasse"};
 		
-		ArrayList<Person> data = new ArrayList<>(
+		ArrayList<Person> data; /*new ArrayList<>(
 		Arrays.asList( 
 				new Person("Peter", "Mustermann", "TG12/1"), 
 				new Person("Sandra", "Schmidt","TG12/1"), 
 				new Person("Tobias", "Müller","TG12/3") 
 		)
-		);
+		);*/
+
+		public void setData(ArrayList<Person> data) {
+			this.data = data;
+		}
 
 		@Override
 		public int getColumnCount() {
