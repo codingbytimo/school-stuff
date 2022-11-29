@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>336</y>
+      <w>252</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>Process
+--
+name: String
+priorität: Ganzzahl
+rechenzeit: Ganzzahl
+zustand: Ganzzahl
+--
+process()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>120</y>
+      <w>252</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Scheduler
+--
+
+--
+scheduler()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>264</y>
+      <w>252</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Model
+--
+
+--
+addProcess()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>408</y>
+      <w>252</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>View
+--
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>816</x>
+      <y>120</y>
+      <w>252</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>Controller
+--
+
+--
+getUserInput()</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
