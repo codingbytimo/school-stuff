@@ -13,6 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -31,13 +32,12 @@ public class Controller {
 	}
 
 	public void initView() { 
-		view.getTable().setModel(getDataOnStartup());
+		view.getTable().setModel(model);
 	} 
 
 	public void initController() { 
 		view.getBtnAppend().addActionListener(e -> appendEmptyRow(e));
 		view.getBtnDelete().addActionListener(e -> deleteRow(e));
-		getDataOnStartup();
 		saveDataOnClose();
 	}
 	
@@ -64,7 +64,7 @@ public class Controller {
 		        try (Writer writer = Files.newBufferedWriter(path, StandardCharsets.UTF_8)){
 					
 		        	Gson gson = new Gson();
-		            gson.toJson(model, writer);
+		            gson.toJson(model.getData(), writer);
 		        	
 				} catch (Exception e) {
 					System.out.println("Failed to save the File.");
@@ -75,23 +75,23 @@ public class Controller {
 		});
 	}
 	
-	private Model getDataOnStartup() {
-		
-				Model readModel = this.model;
+	public ArrayList<Person> getDataOnStartup() {
 			
-				String fileName = "src/main/resources/cars.json";
+				String fileName = "src/resources/persons.json";
 		        Path path = Paths.get(fileName);
+		        assertFalse(Files.exists(path));
 		        
 				try (Reader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
 
 		            Gson gson = new Gson();
-		            readModel = gson.fromJson(reader, 
-		            		new TypeToken<Model>(){}.getType());
+		            model.data = gson.fromJson(reader, 
+		            		new TypeToken<ArrayList<Person>>(){}.getType());
 		        }
 				catch (Exception e) {
 					System.out.println("Error on reading!");
 				}
-				return readModel;
+				
+				return model.data;
 				
 			}
 

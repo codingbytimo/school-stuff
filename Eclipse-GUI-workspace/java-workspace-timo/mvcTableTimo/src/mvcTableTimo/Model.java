@@ -15,13 +15,13 @@ public class Model extends AbstractTableModel {
 				"Nachname",
 				"Klasse"};
 		
-		ArrayList<Person> data; /*new ArrayList<>(
+		ArrayList<Person> data = new ArrayList<>(
 		Arrays.asList( 
 				new Person("Peter", "Mustermann", "TG12/1"), 
 				new Person("Sandra", "Schmidt","TG12/1"), 
 				new Person("Tobias", "Müller","TG12/3") 
 		)
-		);*/
+		);
 
 		public void setData(ArrayList<Person> data) {
 			this.data = data;
