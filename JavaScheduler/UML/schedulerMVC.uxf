@@ -1,82 +1,185 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
-  <zoom_level>12</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>336</y>
-      <w>252</w>
-      <h>156</h>
-    </coordinates>
-    <panel_attributes>Process
---
-name: String
-priorität: Ganzzahl
-rechenzeit: Ganzzahl
-zustand: Ganzzahl
---
-process()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>396</x>
-      <y>120</y>
-      <w>252</w>
-      <h>120</h>
-    </coordinates>
-    <panel_attributes>Scheduler
---
-
---
-scheduler()</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>816</x>
-      <y>264</y>
-      <w>252</w>
-      <h>84</h>
+      <x>40</x>
+      <y>488</y>
+      <w>144</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>Model
 --
-
+data: ArrayList&lt;Process&gt;
 --
-addProcess()</panel_attributes>
++ model(): model</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>816</x>
-      <y>408</y>
-      <w>252</w>
-      <h>84</h>
+      <x>216</x>
+      <y>488</y>
+      <w>104</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>View
 --
 
 --
-</panel_attributes>
++ view(): view</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>816</x>
-      <y>120</y>
-      <w>252</w>
-      <h>84</h>
+      <x>360</x>
+      <y>488</y>
+      <w>136</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Scheduler
+--
+
+--
++ scheduler(): scheduler</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>48</x>
+      <y>352</y>
+      <w>208</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Process
+--
++ pID: Integer
++ pTime: Float
++ pState: State
+--
++ process(pNummer, pZustand): process</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>672</y>
+      <w>112</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Controller
 --
 
 --
-getUserInput()</panel_attributes>
++ controller(): controller</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>560</y>
+      <w>152</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>560</y>
+      <w>32</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>248</x>
+      <y>560</y>
+      <w>168</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>190.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>104</x>
+      <y>424</y>
+      <w>40</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=1..*</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>72</x>
+      <y>216</y>
+      <w>168</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enumeration&gt;&gt;
+State
+--
+calculating
+waiting
+blocked
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>144</x>
+      <y>296</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>592</x>
+      <y>304</y>
+      <w>176</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>de.hgs.itg23.scheduler.gui
+--
+View
+Controller
+Model</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>592</x>
+      <y>456</y>
+      <w>176</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>de.hgs.itg23.scheduler.model
+--
+Process
+Scheduler</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
